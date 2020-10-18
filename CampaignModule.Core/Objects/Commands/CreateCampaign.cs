@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace CampaignModule.Core.Objects
 {
-    public class Command_CreateCampaign : BaseCommands
+    public class CreateCampaign : BaseCommands
     {
-        public Command_CreateCampaign()
+        public CreateCampaign()
         {
             CommandName = "create_campaign";
             ParameterCount = 5;
@@ -14,7 +14,7 @@ namespace CampaignModule.Core.Objects
 
         // args represent the list of parameters. 
         // totally 5 parameters are expected;  arg[0] : name, arg[1] : productCode, arg[2]  : duration, arg[3] : pmlimit, arg[4] : targetSalesCount
-
+      
         public override string CheckParameters(List<string> args, List<Product> productList, List<Campaign> campaignList, List<Order> orderList)
         {
             string result = string.Empty;

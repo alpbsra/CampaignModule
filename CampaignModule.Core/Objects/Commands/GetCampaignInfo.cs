@@ -6,9 +6,9 @@ using System.Text;
 
 namespace CampaignModule.Core.Objects
 {
-    public class Command_GetCampaignInfo : BaseCommands
+    public class GetCampaignInfo : BaseCommands
     {
-        public Command_GetCampaignInfo()
+        public GetCampaignInfo()
         {
             CommandName = "get_campaign_info";
             ParameterCount = 1;

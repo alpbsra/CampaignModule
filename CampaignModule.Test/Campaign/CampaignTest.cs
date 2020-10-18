@@ -91,7 +91,7 @@ namespace CampaignModule.Test
             FactoryCreator CommandCreator = new FactoryCreator();
             BaseCommands commandModel = CommandCreator.CommandFactory(commandType);
 
-            Assert.AreSame(typeof(Command_CreateCampaign), commandModel.GetType());
+            Assert.AreSame(typeof(CreateCampaign), commandModel.GetType());
         }
 
         [Test]
@@ -101,7 +101,7 @@ namespace CampaignModule.Test
             FactoryCreator CommandCreator = new FactoryCreator();
             BaseCommands commandModel = CommandCreator.CommandFactory(commandType);
 
-            Assert.AreNotSame(typeof(Command_CreateCampaign), commandModel.GetType());
+            Assert.AreNotSame(typeof(CreateCampaign), commandModel.GetType());
         }
 
         [Test]

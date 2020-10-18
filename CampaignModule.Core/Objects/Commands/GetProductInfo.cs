@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace CampaignModule.Core.Objects
 {
-    public class Command_GetProductInfo : BaseCommands
+    public class GetProductInfo : BaseCommands
     {
-        public Command_GetProductInfo()
+        public GetProductInfo()
         {
             CommandName = "get_product_info";
             ParameterCount = 1;

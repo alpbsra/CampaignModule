@@ -36,8 +36,8 @@ namespace CampaignModule.App
             }
             return CommandList;
         }
-
-        public string ExecuteCommand(string command, TimeHandler timeHandler, List<Product> S_ProductList, List<Campaign> S_CampaignList, List<Order> S_OrderList)
+        
+        public string ExecuteCommand(string command, TimeHandler timeHandler, List<Product> productList, List<Campaign> campaignList, List<Order> orderList)
         {
             string commandResult = string.Empty;
             char[] seperators = { ' ' };
@@ -59,10 +59,10 @@ namespace CampaignModule.App
 
                 if (commandModel != null)
                 {
-                    string checkResult = commandModel.CheckParameters(cmdArr, S_ProductList, S_CampaignList, S_OrderList);
+                    string checkResult = commandModel.CheckParameters(cmdArr, productList, campaignList, orderList);
 
                     if (string.IsNullOrEmpty(checkResult))
-                        commandResult = commandModel.GetCommandResult(cmdArr, S_ProductList, S_CampaignList, S_OrderList, timeHandler);
+                        commandResult = commandModel.GetCommandResult(cmdArr, productList, campaignList, orderList, timeHandler);
                     else
                         commandResult = checkResult;
                 }

@@ -7,16 +7,16 @@ namespace CampaignModule.App
     class Program
     {
         #region Used for storage 
-        static List<Product> S_ProductList { get; set; }
-        static List<Campaign> S_CampaignList { get; set; }
-        static List<Order> S_OrderList { get; set; }
+        static List<Product> ProductList { get; set; }
+        static List<Campaign> CampaignList { get; set; }
+        static List<Order> OrderList { get; set; }
         #endregion
 
         static void Main(string[] args)
         {
-            S_ProductList = new List<Product>();
-            S_CampaignList = new List<Campaign>();
-            S_OrderList = new List<Order>();
+            ProductList = new List<Product>();
+            CampaignList = new List<Campaign>();
+            OrderList = new List<Order>();
                        
             Console.WriteLine("Please enter one of 1, 2, 3 or 4 values for select scenario file");
             string scenarioFileNumber = Console.ReadLine();
@@ -35,7 +35,7 @@ namespace CampaignModule.App
                         Console.WriteLine("No command in file!");
                     else
                         foreach (string line in CommandList)
-                            Console.WriteLine(opr.ExecuteCommand(line, timehandler, S_ProductList, S_CampaignList, S_OrderList));
+                            Console.WriteLine(opr.ExecuteCommand(line, timehandler, ProductList, CampaignList, OrderList));
                 }
                 catch (Exception exc)
                 {

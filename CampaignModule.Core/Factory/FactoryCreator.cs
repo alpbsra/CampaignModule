@@ -10,19 +10,19 @@ namespace CampaignModule.Core.Factory
             switch (commandType)
             {
                 case "create_product":
-                    command = new Command_CreateProduct();
+                    command = new CreateProduct();
                     break;
                 case "create_campaign":
-                    command = new Command_CreateCampaign();
+                    command = new CreateCampaign();
                     break;
                 case "create_order":
-                    command = new Command_CreateOrder();
+                    command = new CreateOrder();
                     break;
                 case "get_product_info":
-                    command = new Command_GetProductInfo();
+                    command = new GetProductInfo();
                     break;
                 case "get_campaign_info":
-                    command = new Command_GetCampaignInfo();
+                    command = new GetCampaignInfo();
                     break;
                 default:
                     break;
@@ -31,5 +31,4 @@ namespace CampaignModule.Core.Factory
         }
 
     }
-
 }
