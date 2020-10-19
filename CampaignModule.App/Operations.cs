@@ -15,7 +15,7 @@ namespace CampaignModule.App
             List<string> CommandList = new List<string>();
             try
             {
-                string mPath = string.Format("Scenarios\\SCN{0}", scenarioFileNumber);
+                string mPath = $"Scenarios\\Scenario{scenarioFileNumber}.txt";
 
                 if (File.Exists(mPath))
                 {
@@ -36,7 +36,7 @@ namespace CampaignModule.App
             }
             return CommandList;
         }
-        
+
         public string ExecuteCommand(string command, TimeHandler timeHandler, List<Product> productList, List<Campaign> campaignList, List<Order> orderList)
         {
             string commandResult = string.Empty;
@@ -51,7 +51,7 @@ namespace CampaignModule.App
                 commandResult = string.Format("Time is {0}:00", timeHandler.Time.ToString().PadLeft(2, '0'));
             }
             else
-            {                
+            {
                 cmdArr.RemoveAt(0); // the remaining array elements are parameters of the command
 
                 FactoryCreator CommandCreator = new FactoryCreator();

@@ -18,9 +18,9 @@ namespace CampaignModule.App
             CampaignList = new List<Campaign>();
             OrderList = new List<Order>();
                        
-            Console.WriteLine("Please enter one of 1, 2, 3 or 4 values for select scenario file");
+            Console.WriteLine("Please enter one of 1, 2, 3, 4 or 5 values for select scenario file");
             string scenarioFileNumber = Console.ReadLine();
-            var fileNumbers = new List<string> { "1", "2", "3", "4" };
+            var fileNumbers = new List<string> { "1", "2", "3", "4","5" };
 
             if (fileNumbers.Contains(scenarioFileNumber))
             {
